@@ -1,0 +1,67 @@
+{
+  "name": "isomorphic",
+  "version": "0.0.0",
+  "description": "Simple Isomorphic React + Flux + Express + Bootstrap Skeleton",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "build": "gulp build",
+    "test": "exit 0"
+  },
+  "engines": {
+    "node": "^0.12.5",
+    "npm": "^2.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogoazevedos/isomorphic.git"
+  },
+  "keywords": [
+    "simple",
+    "react",
+    "flux",
+    "express",
+    "isomorphic",
+    "bootstrap"
+  ],
+  "author": {
+    "name": "Diogo Azevedo",
+    "email": "diogoazevedos@gmail.com"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diogoazevedos/isomorphic/issues"
+  },
+  "homepage": "https://github.com/diogoazevedos/isomorphic#readme",
+  "dependencies": {
+    "express": "4.13.0",
+    "flux": "2.0.3",
+    "jade": "1.11.0",
+    "react": "0.13.3",
+    "react-router": "0.13.3"
+  },
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-core": "^5.6.15",
+    "babel-loader": "^5.2.2",
+    "gulp": "^3.9.0",
+    "minimist": "^1.1.1",
+    "webpack": "^1.10.1"
+  },
+  "files": [
+    "src/actions",
+    "src/components",
+    "src/config",
+    "src/constants",
+    "src/dispatcher",
+    "src/public",
+    "src/stores",
+    "src/utils",
+    "src/views",
+    "dist/public",
+    "dist/views",
+    "README.md",
+    "LICENSE"
+  ]
+}
