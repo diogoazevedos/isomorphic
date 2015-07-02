@@ -27,3 +27,27 @@
 │── package.json                # The list of 3rd party libraries and utilities
 └── webpack.config.js           # Webpack configuration for bundling and optimization
 ```
+
+### Getting Started
+
+Just [fork](https://github.com/diogoazevedos/isomorphic/fork) the repo and start hacking:
+
+```shell
+$ git clone -o upstream -b master --single-branch \
+      https://github.com/diogoazevedos/isomorphic.git Isomorphic
+$ cd Isomorphic
+$ npm install -g gulp           # Install Gulp task runner globally
+$ npm install                   # Install Node.js components listed in package.json
+```
+
+### How to Build
+
+```shell
+$ gulp build
+```
+
+### How to Run
+
+```shell
+$ gulp serve                     # or, `gulp serve --watch`
+```

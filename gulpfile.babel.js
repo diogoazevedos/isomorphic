@@ -5,12 +5,13 @@ import childProcess from 'child_process'
 
 import config from './webpack.config.js'
 const argv = minimist(process.argv.slice(2))
-let watch = false
+const watch = !! argv.watch
 
 // Bundle Application
 gulp.task('bundle', (callback) => {
   const bundler = webpack(config)
 
+  let count = 0
   function bundle(error, stats) {
     if (error) throw new error
 
@@ -25,7 +26,9 @@ gulp.task('bundle', (callback) => {
       cachedAssets: !! argv.verbose
     }))
 
-    callback()
+    if (++count === (watch ? config.length : 1)) {
+      callback()
+    }
   }
 
   if (watch) {
@@ -48,8 +51,7 @@ gulp.task('assets', () => {
 gulp.task('build', ['bundle', 'assets'])
 
 // Watch Application
-gulp.task('watch', ['assets'], () => {
-  watch = true
+gulp.task('watch', ['assets', 'bundle'], () => {
   gulp.watch([
       'src/public*/**',
       'src/views*/**'
@@ -57,7 +59,7 @@ gulp.task('watch', ['assets'], () => {
 })
 
 // Serve Application
-gulp.task('serve', ['bundle', 'assets'], () => {
+gulp.task('serve', ['watch'], () => {
   let jobs = {}
   Promise.all([
     new Promise((resolve) => {
