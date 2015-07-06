@@ -9,8 +9,8 @@
     "test": "exit 0"
   },
   "engines": {
-    "node": "^0.12.5",
-    "npm": "^2.12.0"
+    "node": "0.12.6",
+    "npm": "2.11.2"
   },
   "repository": {
     "type": "git",
@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/diogoazevedos/isomorphic#readme",
   "dependencies": {
-    "express": "4.13.0",
+    "express": "4.13.1",
     "flux": "2.0.3",
     "jade": "1.11.0",
     "react": "0.13.3",
@@ -44,9 +44,10 @@
   "devDependencies": {
     "babel": "^5.6.14",
     "babel-core": "^5.6.15",
-    "babel-loader": "^5.2.2",
+    "babel-loader": "^5.3.1",
     "gulp": "^3.9.0",
     "minimist": "^1.1.1",
+    "node-libs-browser": "^0.5.2",
     "webpack": "^1.10.1"
   },
   "files": [

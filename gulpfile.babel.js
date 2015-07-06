@@ -80,4 +80,8 @@ gulp.task('serve', ['watch'], () => {
       })()
     })
   ])
+
+  process.on('exit', () => {
+    jobs.server.kill('SIGTERM')
+  })
 })
