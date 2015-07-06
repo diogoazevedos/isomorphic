@@ -7,6 +7,8 @@ import config from './webpack.config.js'
 const argv = minimist(process.argv.slice(2))
 const watch = !! argv.watch
 
+gulp.task('default', ['serve'])
+
 // Bundle Application
 gulp.task('bundle', (callback) => {
   const bundler = webpack(config)
