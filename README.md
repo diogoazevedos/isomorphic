@@ -1,5 +1,9 @@
 # Simple Isomorphic
 
+[![Build Status](http://img.shields.io/travis/diogoazevedos/isomorphic/master.svg)](http://travis-ci.org/diogoazevedos/isomorphic)
+[![Dependency Status](https://img.shields.io/david/diogoazevedos/isomorphic.svg)](https://david-dm.org/diogoazevedos/isomorphic)
+[![devDependency Status](https://img.shields.io/david/dev/diogoazevedos/isomorphic.svg)](https://david-dm.org/diogoazevedos/isomorphic#info=devDependencies)
+
 > This project template is a skeleton for an [isomorphic](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/)
 > web application (SPA) based on Facebook's [React](https://facebook.github.io/react/)
 > library and [Flux](http://facebook.github.io/flux/) architecture. You can use
