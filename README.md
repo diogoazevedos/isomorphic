@@ -20,6 +20,7 @@
 │   ├── /actions/               # Action creators that allow to trigger a dispatch to stores
 │   ├── /components/            # React components
 │   ├── /constants/             # Constants (action types etc.)
+│   ├── /decorators/            # Higher-order React components
 │   ├── /dispatcher/            # Flux application dispatcher
 │   ├── /public/                # Static files which are copied into the /dist/public folder
 │   ├── /stores/                # Stores contain the application state and logic
