@@ -1,5 +1,5 @@
 import React from 'react'
-import withAuthentication from '../decorators/withAuthentication'
+import withAuthentication from '../../decorators/withAuthentication'
 import Router from 'react-router'
 
 const Profile = React.createClass({

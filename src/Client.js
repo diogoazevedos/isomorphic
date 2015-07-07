@@ -1,7 +1,7 @@
 import React from 'react'
 import Router from 'react-router'
-import routes from './config/routes'
+import Routes from './config/Routes'
 
-Router.run(routes, Router.HistoryLocation, (Root, state) => {
+Router.run(Routes, Router.HistoryLocation, (Root, state) => {
   React.render(<Root {...state} />, document.getElementById('main'))
 })

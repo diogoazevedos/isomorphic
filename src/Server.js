@@ -2,7 +2,7 @@ import path from 'path'
 import express from 'express'
 import React from 'react'
 import Router from 'react-router'
-import routes from './config/routes'
+import Routes from './config/Routes'
 
 const server = express()
 
@@ -12,7 +12,7 @@ server.set('view engine', 'jade')
 server.use(express.static(path.join(__dirname, 'public')))
 
 server.get('*', (request, response) => {
-  Router.run(routes, request.path, (Root, state) => {
+  Router.run(Routes, request.path, (Root, state) => {
     let content = React.renderToString(<Root {...state} />)
     response.render('react', {
       content: content

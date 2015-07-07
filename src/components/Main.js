@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { RouteHandler } from 'react-router'
 import { Parse } from 'parse'
-import { Application, JavaScript } from '../config/parse'
-import Navigation from './Common/Navigation'
+import { Navigation } from './Common'
+import Services from '../config/Services'
 
-Parse.initialize(Application, JavaScript)
+// Boot Parse
+Parse.initialize(Services.Parse.APPID, Services.Parse.JSKEY)
 
 class Main extends Component {
   render() {

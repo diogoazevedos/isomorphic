@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
-import AuthUtil from '../utils/Auth'
+import AuthUtil from '../../utils/Auth'
 
-class Login extends Component {
+class SignUp extends Component {
   static contextTypes = {
     router: PropTypes.func.isRequired
   }
@@ -11,17 +11,17 @@ class Login extends Component {
     const email = this.refs.email.getDOMNode().value
     const password = this.refs.password.getDOMNode().value
 
-    AuthUtil.logIn(email, password).then(() => {
-      console.log('Logged In...')
+    AuthUtil.signUp(email, password, email).then(() => {
+      console.log('signed Up...')
     }, error => {
-      console.log('Logged In Failed...', error)
+      console.log('signed Up Failed...', error)
     })
   }
 
   render() {
     return (
       <form className="from-signin" role="form" onSubmit={ this.handleSubmit }>
-        <h2 className="form-signin-heading">Log In</h2>
+        <h2 className="form-signin-heading">Sign Up</h2>
         <label htmlFor="email" className="sr-only">Email address</label>
         <input type="email" id="email" className="form-control" placeholder="Email address" ref="email" required autofocus />
         <label htmlFor="password" className="sr-only">Password</label>
@@ -32,4 +32,4 @@ class Login extends Component {
   }
 }
 
-export default Login
+export default SignUp
